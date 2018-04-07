@@ -1,5 +1,5 @@
 """
-WSGI config for anybirth project.
+WSGI config for enyfar project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "anybirth.settings")
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "enyfar.settings")
 
 application = get_wsgi_application()
