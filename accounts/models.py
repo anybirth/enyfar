@@ -57,9 +57,9 @@ class User(AbstractBaseUser, PermissionsMixin):
             'unique': _("A user with that username already exists."),
         },
     )
-    first_name = models.CharField(_('名'), max_length=30, blank=True)
-    last_name = models.CharField(_('姓'), max_length=150, blank=True)
-    email = models.EmailField(_('メールアドレス'), unique=True, blank=True, null=True)
+    first_name = models.CharField(_('first name'), max_length=30, blank=True)
+    last_name = models.CharField(_('last name'), max_length=150, blank=True)
+    email = models.EmailField(_('email address'), unique=True, blank=True, null=True)
     phone_number = models.CharField(_('電話番号'), validators=[tel_number_regex], max_length=15, unique=True, blank=True, null=True)
     uuid = models.UUIDField('ユニークID', primary_key=False, blank=True, null=True)
     uuid_deadline = models.DateTimeField(_('ユニークID有効期限'), blank=True, null=True)
